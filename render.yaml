@@ -1,4 +1,3 @@
-
 services:
   - type: web
     name: cybershield-1
@@ -7,3 +6,4 @@ services:
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn app:app --bind 0.0.0.0:5000"
     runtime: python
+    port: 5000
