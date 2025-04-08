@@ -1,10 +1,9 @@
+
 services:
   - type: web
     name: cybershield-backend
     env: python
-    region: oregon
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python app.py"
     plan: free
-    autoDeploy: true
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app --bind 0.0.0.0:5000"
     runtime: python
